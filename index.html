@@ -9,7 +9,6 @@
   <link rel="icon" href="/icon.png" sizes="32x32" type="image/png">
   <script>
     async function fetchMovies() {
-<<<<<<< HEAD
       const response = await fetch(
         `https://inshorts.deta.dev/news?category=`
       );
@@ -17,15 +16,6 @@
       const newsdata = damta.data;
       console.log('%c Inspire By Web', 'font-weight: bold; font-size: 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
       console.log(newsdata)
-=======
-      let key1 = '066d822bb3e44df4a346e2ad350b183c';
-      let cet = "business";
-      const response = await fetch(`http://newsapi.org/v2/top-headlines?country=us&category=${cet}&apiKey=${key1}`);
-      const data = await response.json();
-      const newsdata = data.articles;
-      console.log('%c Inspire By Web', 'font-weight: bold; font-size: 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
-      console.log(newsdata);
->>>>>>> 3d0d8aaa46dfa41375e31be871bce189a86937cb
       let newsHtml = "";
       newsdata.forEach(function (element, index) {
         let news = `      <div class="card" id="collapse${index}">
