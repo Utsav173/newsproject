@@ -58,47 +58,47 @@
 
 
 
-console.log("This is my index js file");
+// console.log("This is my index js file");
 
-// Initialize the news api parameters
-let apiKey = '066d822bb3e44df4a346e2ad350b183c'
+// // Initialize the news api parameters
+// let apiKey = '066d822bb3e44df4a346e2ad350b183c'
 
-// Grab the news container
-let newsAccordion = document.getElementById('dscnews');
+// // Grab the news container
+// let newsAccordion = document.getElementById('dscnews');
 
-// Create an ajax get request
-const xhr = new XMLHttpRequest();
-xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`, true);
+// // Create an ajax get request
+// const xhr = new XMLHttpRequest();
+// xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`, true);
 
-// What to do when response is ready
-xhr.onload = function () {
-    if (this.status === 200) {
-        let json = JSON.parse(this.responseText);
-        let articles = json.articles;
-        console.log(articles);
-        let newsHtml = "";
-        articles.forEach(function(element, index) {
-            // console.log(element, index)
-            let news = `<div class="col" id="collapse${index}">
-            <div class="card text-bg-dark"  id="heading${index}">
-                <img src="${element["urlToImage"]}" class="card-img" alt="...">
-                <div class="card-img-overlay" id="${index}">
-                    <h5 class="card-title">${element["title"]}</h5>
-                    <p class="card-text">${element["content"]}</p>
-                    <p class="card-text">Last updated ${element["publishedAt"]}</p>
-                </div>
-            </div>
-            </div>`;
-            newsHtml += news;
-        });
-        newsAccordion.innerHTML = newsHtml;
-    }
-    else {
-        console.log("Some error occured")
-    }
-}
+// // What to do when response is ready
+// xhr.onload = function () {
+//     if (this.status === 200) {
+//         let json = JSON.parse(this.responseText);
+//         let articles = json.articles;
+//         console.log(articles);
+//         let newsHtml = "";
+//         articles.forEach(function(element, index) {
+//             // console.log(element, index)
+//             let news = `<div class="col" id="collapse${index}">
+//             <div class="card text-bg-dark"  id="heading${index}">
+//                 <img src="${element["urlToImage"]}" class="card-img" alt="...">
+//                 <div class="card-img-overlay" id="${index}">
+//                     <h5 class="card-title">${element["title"]}</h5>
+//                     <p class="card-text">${element["content"]}</p>
+//                     <p class="card-text">Last updated ${element["publishedAt"]}</p>
+//                 </div>
+//             </div>
+//             </div>`;
+//             newsHtml += news;
+//         });
+//         newsAccordion.innerHTML = newsHtml;
+//     }
+//     else {
+//         console.log("Some error occured")
+//     }
+// }
 
-xhr.send()
+// xhr.send()
 
 
 
